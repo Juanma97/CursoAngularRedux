@@ -1,0 +1,10 @@
+
+<div class="container">
+    <app-toolbar [title]=title></app-toolbar>
+    <div class="container-products">
+        <div class="product" *ngFor="let product of products">
+            Producto: {{product.name}}, Precio: {{product.price}}
+            <div class="btn-add-cart" (click)="addCart(product)">Añadir al carrito</div>
+        </div>
+    </div>
+</div>

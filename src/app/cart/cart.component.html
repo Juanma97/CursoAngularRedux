@@ -1,0 +1,9 @@
+<div class="container">
+    <app-toolbar [title]=title></app-toolbar>
+    <div class="container-products">
+        <div class="product" *ngFor="let product of products$ | async">
+            Producto: {{product.name}}, Precio: {{product.price}}
+            <div class="btn-delete-cart" (click)="deleteFromCart(product.id)">Eliminar del carrito</div>
+        </div>
+    </div>
+</div>

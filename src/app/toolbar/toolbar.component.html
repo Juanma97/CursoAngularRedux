@@ -1,0 +1,5 @@
+<div class="toolbar">
+    <div class="toolbar-component-title">{{title}}</div>
+    <div class="toolbar-component" (click)="goToCart()">Carrito de la compra: {{this.quantityInCart$ | async}}</div>
+    <div class="toolbar-component" (click)="goToProductsPage()">Volver al inicio</div>
+</div>
