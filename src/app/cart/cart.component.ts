@@ -5,6 +5,7 @@ import { Store } from '@ngrx/store';
 import { Product } from '../model/Product';
 import { AppState } from '../store/app.state';
 import * as Actions from '../store/actions/cart-actions';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-cart',

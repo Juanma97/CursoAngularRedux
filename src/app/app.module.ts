@@ -11,6 +11,9 @@ import { StoreModule } from '@ngrx/store';
 import { cartReducer } from './store/reducers/cart-reducer';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
+import { productsReducer } from './store/reducers/product-reducer';
+import { ProductEffects } from './store/effects/product-effects';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -22,8 +25,9 @@ import { environment } from 'src/environments/environment';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({cartProducts: cartReducer}),
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    StoreModule.forRoot({cartProducts: cartReducer, mainProducts: productsReducer}),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    EffectsModule.forRoot([ProductEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
