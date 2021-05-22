@@ -2,11 +2,7 @@ import { Product } from '../../model/Product';
 import { CartActions, CartActionTypes } from '../actions/cart-actions';
 
 
-const initialStateCart: Array<Product> = [{
-  id: '1',
-  name: 'PR1',
-  price: 35
-}];
+const initialStateCart: Array<Product> = [];
 
 export function cartReducer(state: Array<Product> = initialStateCart, action: CartActions) {
   switch (action.type) {

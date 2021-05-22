@@ -14,6 +14,7 @@ import { environment } from 'src/environments/environment';
 import { productsReducer } from './store/reducers/product-reducer';
 import { ProductEffects } from './store/effects/product-effects';
 import { EffectsModule } from '@ngrx/effects';
+import { Service } from './service/service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { EffectsModule } from '@ngrx/effects';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     EffectsModule.forRoot([ProductEffects])
   ],
-  providers: [],
+  providers: [Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
